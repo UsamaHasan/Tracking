@@ -1,0 +1,55 @@
+\hypertarget{structNeuralNet}{}\doxysection{Neural\+Net Struct Reference}
+\label{structNeuralNet}\index{NeuralNet@{NeuralNet}}
+
+
+{\ttfamily \#include $<$Neural\+Net.\+h$>$}
+
+Inheritance diagram for Neural\+Net\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structNeuralNet}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNeuralNet_a699840d907c8252f4d7d4701bfc783b1}{Neural\+Net}} (const char $\ast$conf\+\_\+file, torch\+::\+Device $\ast$device)
+\item 
+\mbox{\Hypertarget{structNeuralNet_a07f39c6d7d56a3d7b6b7393fd47ef776}\label{structNeuralNet_a07f39c6d7d56a3d7b6b7393fd47ef776}} 
+map$<$ string, string $>$ $\ast$ {\bfseries get\+\_\+net\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{structNeuralNet_a6d7b87b2b54a7617fe445c32cf7f9312}\label{structNeuralNet_a6d7b87b2b54a7617fe445c32cf7f9312}} 
+void {\bfseries load\+\_\+weights} (const char $\ast$weight\+\_\+file)
+\item 
+\mbox{\Hypertarget{structNeuralNet_a77e9619ffbbf4e7f416fd274781807e8}\label{structNeuralNet_a77e9619ffbbf4e7f416fd274781807e8}} 
+torch\+::\+Tensor {\bfseries forward} (torch\+::\+Tensor x)
+\item 
+torch\+::\+Tensor \mbox{\hyperlink{structNeuralNet_a6615e51cc71fa8e757f73653d2752e40}{write\+\_\+results}} (torch\+::\+Tensor prediction, int num\+\_\+classes, float confidence, float nms\+\_\+conf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declare A struct Of type nn\+::\+Module 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structNeuralNet_a699840d907c8252f4d7d4701bfc783b1}\label{structNeuralNet_a699840d907c8252f4d7d4701bfc783b1}} 
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{NeuralNet()}{NeuralNet()}}
+{\footnotesize\ttfamily Neural\+Net\+::\+Neural\+Net (\begin{DoxyParamCaption}\item[{const char $\ast$}]{conf\+\_\+file,  }\item[{torch\+::\+Device $\ast$}]{device }\end{DoxyParamCaption})}
+
+Overloaded constructor for class \mbox{\hyperlink{structNeuralNet}{Neural\+Net}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structNeuralNet_a6615e51cc71fa8e757f73653d2752e40}\label{structNeuralNet_a6615e51cc71fa8e757f73653d2752e40}} 
+\index{NeuralNet@{NeuralNet}!write\_results@{write\_results}}
+\index{write\_results@{write\_results}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{write\_results()}{write\_results()}}
+{\footnotesize\ttfamily torch\+::\+Tensor Neural\+Net\+::write\+\_\+results (\begin{DoxyParamCaption}\item[{torch\+::\+Tensor}]{prediction,  }\item[{int}]{num\+\_\+classes,  }\item[{float}]{confidence,  }\item[{float}]{nms\+\_\+conf }\end{DoxyParamCaption})}
+
+at\+::tensor.\+select function documentation Returns a new Tensor which is a tensor slice at the given index in the dimension dim. The returned tensor has one less dimension\+: the dimension dim is removed. As a result, it is not possible to select() on a 1D tensor.
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/usamahasan/tracking/\+C++/src/Neural\+Net.\+h\item 
+/home/usamahasan/tracking/\+C++/src/Neural\+Net.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{classModel}{}\doxysection{Model Class Reference}
+\label{classModel}\index{Model@{Model}}
+
+
+{\ttfamily \#include $<$model.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModel_a9d3525e8a216092b5cbc85086f009760}{Model}} (std\+::string name\+\_\+, int num\+\_\+class, float detection\+\_\+thresh, float nms)
+\item 
+void \mbox{\hyperlink{classModel_a27632dee8b0a984ebc51d45c29526a38}{device\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{classModel_ac23541a5fa5f60bfb4f3db862d4e857c}{initialization}} (char $\ast$cfg, char $\ast$weight\+\_\+file)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classModel_a9da122e8f61450ffdeccb771a8c487a3}{preprocess\+\_\+input}} (cv\+::\+Mat image)
+\item 
+torch\+::\+Tensor \mbox{\hyperlink{classModel_ac231e09209f053b180ed299373d564b6}{forward\+\_\+pass}} (cv\+::\+Mat image)
+\item 
+std\+::list$<$ \mbox{\hyperlink{structobject__attributes}{object\+\_\+attributes}} $>$ \mbox{\hyperlink{classModel_ae30157192a9ee148f7173cd00a01887a}{output\+\_\+processing}} (cv\+::\+Mat \&image, torch\+::\+Tensor result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Usama Hasan\+The following class will Initialize Yolov3 model in Libtorch framework, 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & contains the name of model \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+classes} & the number of classes model will detect \\
+\hline
+\mbox{\texttt{ in}}  & {\em detection\+\_\+threshold} & the accuracy threshold of model \\
+\hline
+\mbox{\texttt{ in}}  & {\em nms\+\_\+threshold} & threshold to remove noise ouputs \\
+\hline
+\mbox{\texttt{ in}}  & {\em input\+\_\+image\+\_\+size} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModel_a9d3525e8a216092b5cbc85086f009760}\label{classModel_a9d3525e8a216092b5cbc85086f009760}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+,  }\item[{int}]{num\+\_\+class,  }\item[{float}]{detection\+\_\+thresh,  }\item[{float}]{nms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor Overloaded Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name\+\_\+} & Name of model \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+class} & Number of classes of model \\
+\hline
+\mbox{\texttt{ in}}  & {\em detection\+\_\+thresh} & Accuracy for object detection \\
+\hline
+\mbox{\texttt{ in}}  & {\em nms} & threshold to remove noise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModel_a27632dee8b0a984ebc51d45c29526a38}\label{classModel_a27632dee8b0a984ebc51d45c29526a38}} 
+\index{Model@{Model}!device\_init@{device\_init}}
+\index{device\_init@{device\_init}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{device\_init()}{device\_init()}}
+{\footnotesize\ttfamily void Model\+::device\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The function will initialize Torch backend based on the compile binaries provided by the user \begin{DoxyReturn}{Returns}
+torch\+::device() with available backend 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModel_ac231e09209f053b180ed299373d564b6}\label{classModel_ac231e09209f053b180ed299373d564b6}} 
+\index{Model@{Model}!forward\_pass@{forward\_pass}}
+\index{forward\_pass@{forward\_pass}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{forward\_pass()}{forward\_pass()}}
+{\footnotesize\ttfamily torch\+::\+Tensor Model\+::forward\+\_\+pass (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classModel}{Model}} will run a forward pass and returns output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & Input tensor to be feeded to the network \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+results Output of model 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModel_ac23541a5fa5f60bfb4f3db862d4e857c}\label{classModel_ac23541a5fa5f60bfb4f3db862d4e857c}} 
+\index{Model@{Model}!initialization@{initialization}}
+\index{initialization@{initialization}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{initialization()}{initialization()}}
+{\footnotesize\ttfamily void Model\+::initialization (\begin{DoxyParamCaption}\item[{char $\ast$}]{cfg,  }\item[{char $\ast$}]{weight\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize a Y\+O\+LO model with torch backend 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cfg} & should contain the path of yolo configuration file \\
+\hline
+\mbox{\texttt{ in}}  & {\em weight\+\_\+file} & should contain the path of model weight file to be loaded \\
+\hline
+\mbox{\texttt{ in}}  & {\em device} & should contain torch\+::\+Device object with prefreable backend set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModel_ae30157192a9ee148f7173cd00a01887a}\label{classModel_ae30157192a9ee148f7173cd00a01887a}} 
+\index{Model@{Model}!output\_processing@{output\_processing}}
+\index{output\_processing@{output\_processing}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{output\_processing()}{output\_processing()}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{structobject__attributes}{object\+\_\+attributes}}$>$ Model\+::output\+\_\+processing (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image,  }\item[{torch\+::\+Tensor}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Process model output to return roi of objects 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em image} & Input Image on which results will be drawn \\
+\hline
+\mbox{\texttt{ in}}  & {\em result} & torch\+::\+Tensor output of model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the function will return the attributes of all the objects detected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModel_a9da122e8f61450ffdeccb771a8c487a3}\label{classModel_a9da122e8f61450ffdeccb771a8c487a3}} 
+\index{Model@{Model}!preprocess\_input@{preprocess\_input}}
+\index{preprocess\_input@{preprocess\_input}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{preprocess\_input()}{preprocess\_input()}}
+{\footnotesize\ttfamily cv\+::\+Mat Model\+::preprocess\+\_\+input (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convert input image to model required format 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & input to model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resized float image 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/usamahasan/tracking/\+C++/src/model.\+hpp\end{DoxyCompactItemize}

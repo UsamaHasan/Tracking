@@ -1,0 +1,56 @@
+\hypertarget{classPipeline}{}\doxysection{Pipeline Class Reference}
+\label{classPipeline}\index{Pipeline@{Pipeline}}
+
+
+A container class to run all the modules.  
+
+
+
+
+{\ttfamily \#include $<$pipeline.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPipeline_a79e49366358f823b8812658f8bf3a9e8}{Pipeline}} ()
+\item 
+void \mbox{\hyperlink{classPipeline_a25f9468e929d928f2c16fa454efe18b1}{pipe}} (char $\ast$yolo\+\_\+cfg, char $\ast$weight\+\_\+file, std\+::string bag\+\_\+file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A container class to run all the modules. 
+
+Author \+: Usama Hasan 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPipeline_a79e49366358f823b8812658f8bf3a9e8}\label{classPipeline_a79e49366358f823b8812658f8bf3a9e8}} 
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{Pipeline()}{Pipeline()}}
+{\footnotesize\ttfamily Pipeline\+::\+Pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deafault Constructor of class \mbox{\hyperlink{classPipeline}{Pipeline}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPipeline_a25f9468e929d928f2c16fa454efe18b1}\label{classPipeline_a25f9468e929d928f2c16fa454efe18b1}} 
+\index{Pipeline@{Pipeline}!pipe@{pipe}}
+\index{pipe@{pipe}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{pipe()}{pipe()}}
+{\footnotesize\ttfamily void Pipeline\+::pipe (\begin{DoxyParamCaption}\item[{char $\ast$}]{yolo\+\_\+cfg,  }\item[{char $\ast$}]{weight\+\_\+file,  }\item[{std\+::string}]{bag\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function will start realsense pipeline to read frames from either the connected camera stream or the provided bag file and further perform inference to get the required output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em yolo\+\_\+cfg} & input your yolo model cfg here \\
+\hline
+\mbox{\texttt{ in}}  & {\em weight\+\_\+file} & provide your weight file here \\
+\hline
+\mbox{\texttt{ in}}  & {\em bag\+\_\+file} & input your path to recorded realsense frames ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/usamahasan/tracking/\+C++/src/pipeline.\+hpp\end{DoxyCompactItemize}
