@@ -14,11 +14,13 @@ endif()
 aux_source_directory(. DIR_SRCS)
 add_executable(main ${DIR_SRCS})
 
+#Replace the path to libtorch binaries here 
+set(CMAKE_PREFIX_PATH /home/usamahasan/C++/libtorch-GPU/libtorch)
 
-set(CMAKE_PREFIX_PATH /home/usamahasan/tracking/C++/libtorch-GPU/libtorch)
 find_package(realsense2 REQUIRED)
 find_package( OpenCV REQUIRED )
 find_package(Torch REQUIRED)
+find_package(PahoMqttCpp REQUIRED)
 include_directories(include ${realsense_INCLUDE_DIR})
 include_directories(include ${OpenCV_INCLUDE_DIR})
 

@@ -31,4 +31,7 @@
 *.out
 *.app
 #Visual Studio files
-.vscode
+.vscode/
+
+#build
+build/
