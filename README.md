@@ -1,5 +1,5 @@
 # Tracking
-The following code is an uncompleted version of tracking hand trajectory using yolov3 and opencv tracker 'CSRT'.
+The following code is an uncompleted version of calculating hand trajectory using Realsense D435, yolov3(F-RCNN) and opencv tracker 'CSRT' for further tracking the hand.
 
 ## Requirements
 opencv(==3.4.6) built with tracker repos from opencv-contrib.
